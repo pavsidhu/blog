@@ -9,98 +9,179 @@ body {
   background-color: #03A9F4;
 }
 
-.overflow {
-  overflow: hidden;
-}
-
-h1 {
-  margin: 0;
-  color: #f8f8f8;
-  position: absolute;
-  font-size: 3.5em;
-  top: 15px;
-  left: 15px;
-}
-
-div.circle {
-  background-color: white;
-  border-radius: 50%;
-  margin: 5vh auto;
-  width: 150vw;
-  height: 90vh;
-  position: relative;
-  left: -25vw;
-  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-div.circle img.face {
-  width: 50%;
+.center, section.content img.face {
   margin: 0 auto;
   display: block;
 }
 
-div.circle p {
-  text-align: center;
-}
-
 a {
-  color: #03A9F4;
+  color: inherit;
   text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.43, 1.25, 0.79, 1.28);
+  position: relative;
 }
 
-p a:hover {
-  text-decoration: underline;
+h1 {
+  font-size: 6em;
+  text-align: center;
+  color: #424242;
+}
+
+h6 {
+  font-size: 3.5em;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3vh;
+  font-weight: 400;
+}
+
+h6 br {
+  font-size: 1.5em;
 }
 
 p {
+  font-size: 4.5em;
+  text-align: center;
   color: #424242;
-  font-size: 1.6em;
-  line-height: 1.5em;
+  line-height: 1.4;
+  margin: 1em 0;
 }
 
-div.social {
-  margin: 7em 0;
+p a {
+  color: #03A9F4;
 }
 
-div.social svg {
+p a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  border-bottom: 3px solid #03A9F4;
+  transition: width 150ms;
+}
+
+p a:hover:after {
+  width: 100%;
+}
+
+section.content {
+  background-color: #fff;
+  border-radius: 50px;
+  margin: 5vh 5vh 3vh;
+  box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.3);
+  padding: 2em 4em;
+}
+
+section.content img.face {
+  width: 100%;
+}
+
+section.content div.social {
+  text-align: center;
+}
+
+section.content div.social svg {
   fill: #424242;
-  width: 4.5em;
-  height: 4.5em;
-  margin: 0 1em;
+  display: inline-block;
+  width: 20em;
+  height: 20em;
+  margin: 4em;
+  transition: transform 150ms cubic-bezier(0.43, 1.25, 0.79, 1.28), fill 100ms;
 }
 
-svg.twitter:hover {
+section.content div.social svg:hover {
+  transform: scale(1.1);
+}
+
+section.content div.social svg:hover.social-medium :nth-child(1) {
+  fill: #01ab6c;
+}
+
+section.content div.social svg:hover.social-medium :nth-child(2) {
+  fill: #13c766;
+}
+
+section.content div.social svg:hover.social-medium :nth-child(3) {
+  fill: #0ae370;
+}
+
+section.content div.social svg:hover.social-medium :nth-child(4) {
+  fill: #32fc8d;
+}
+
+section.content div.social svg:hover.social-revisify :nth-child(1) {
+  fill: #bfca33;
+}
+
+section.content div.social svg:hover.social-revisify :nth-child(2) {
+  fill: #c21e5c;
+}
+
+section.content div.social svg:hover.social-revisify :nth-child(3) {
+  fill: #0abcd4;
+}
+
+section.content div.social svg:hover.social-revisify :nth-child(4) {
+  fill: #7cb342;
+}
+
+section.content div.social svg:hover.social-twitter {
   fill: #55acee;
 }
 
-svg.github:hover {
+section.content div.social svg:hover.social-github {
   fill: #4078c0;
 }
 
-@media only screen and (min-width: 40.063em) {
-  div.circle {
-    position: static;
-    margin: 5vh auto;
-    width: 90vh;
-    height: 90vh;
+@media only screen and (min-width: 640px) {
+  h1 {
+    font-size: 4.5em;
   }
-
+  h6 {
+    font-size: 2.5em;
+  }
   p {
+    font-size: 3em;
+  }
+  section.content {
+    padding: 2em 8em;
+  }
+  section.content img.face {
+    width: 70%;
+  }
+  section.content div.social svg {
+    width: 8em;
+    height: 8em;
+    margin: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4em;
+  }
+  h6 {
     font-size: 2em;
-    line-height: 1.75em;
   }
-
-  div.social {
-    margin: 4em 0;
+  p {
+    font-size: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
   }
-
-  div.social svg {
-    /*width: 10em;
-    height: 10em;
-    margin: 0 2em;*/
+  section.content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 8em;
+  }
+  section.content img.face {
+    width: 50%;
+  }
+  section.content div.social svg {
+    width: 7em;
+    height: 7em;
+    margin: 2em;
   }
 }
