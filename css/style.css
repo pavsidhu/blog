@@ -71,9 +71,11 @@ section.content {
   margin: 5vh 5vh 3vh;
   box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.3);
   padding: 2em 4em;
+  transform: rotateX(50deg);
 }
 
 section.content img.face {
+  transform: rotateX(50deg);
   width: 100%;
 }
 
