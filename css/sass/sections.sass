@@ -1,0 +1,187 @@
+// main: main.sass
+
+header
+  height: 15vh
+
+.landing
+  height: 55vh
+  min-height: 300px
+  @extend .flex-center
+
+  .face
+    height: 30vh
+    min-height: 150px
+    margin-bottom: 16px
+
+    .face, .ear
+      fill: #ffcc80
+
+    .hair-shadow, .ear-shadow
+      opacity: 0.05
+
+    .glasses-inner
+      fill: #fff
+
+    .glasses-reflection
+      fill: #129fff
+      opacity: 0.05
+
+  .landing-text
+    @extend .flex-center
+
+    p
+      margin: 0
+
+.read-more
+  height: 15vh
+  @extend .flex-center
+
+  .read-more-button
+    cursor: pointer
+    margin: 0 auto
+    position: relative
+
+    p
+      margin-top: 4px
+      font-size: 3rem
+      line-height: 3rem
+
+.fun-fact
+  .fun-fact-description
+    @extend .flex-center
+    flex-direction: row
+
+    .fun-fact-number
+      font-size: 7rem
+      line-height: 7rem
+      margin-right: 16px
+
+    p
+      margin: 0
+
+.where-can-find-you
+  .social
+    @extend .flex-center
+    align-items: flex-start
+
+    a + a > .social-item
+      margin-top: 32px
+
+    .social-item
+      @extend .flex-center
+      flex-direction: row
+      justify-content: left
+      transition: transform 200ms
+
+      svg
+        fill: $text-color
+
+      &:hover
+        transform: scale(1.03)
+
+        &.social-medium svg
+          fill: #00ab6c
+
+        &.social-github svg
+          fill: #4078c0
+
+        &.social-twitter svg
+          fill: #1da1f2
+
+        &.social-email svg
+          fill: #ea4335
+
+      svg
+        width: 48px
+        height: 48px
+        margin-right: 16px
+
+    .social-text
+      @extend .flex-center
+      align-items: flex-start
+
+      .social-handle
+        margin: 0
+        opacity: 0.3
+        font-size: 1.5rem
+
+footer
+  height: 15vh
+  position: relative
+  justify-content: flex-end !important
+
+  p
+    color: white
+    margin-bottom: 16px
+
+@media only screen and (min-width: map-get($media, tablet))
+  header, footer
+    height: 10vh
+
+  .landing
+    min-height: 400px
+
+    .face
+      min-height: 200px
+
+  .where-can-find-you
+    .social
+      a + a > .social-item
+        margin-top: 40px
+
+      .social-item svg
+          width: 60px
+          height: 60px
+          margin-right: 24px
+
+      .social-text
+        .social-handle
+          margin: 0
+          opacity: 0.3
+          font-size: 1.6rem
+
+@media only screen and (min-width: map-get($media, desktop))
+  .landing
+    height: calc(100vh - 472px)
+    min-height: 500px
+
+    .section-contents
+      flex-direction: row-reverse
+      max-width: 1000px
+
+      .face
+        margin-left: 5vw
+        margin-bottom: 0
+        height: 50vh
+        min-height: 300px
+        max-height: 500px
+
+  .read-more
+    height: 10vh
+
+    .read-more-button
+      p
+        margin-top: 8px
+        font-size: 4rem
+        line-height: 4rem
+
+  .fun-fact
+    .fun-fact-description
+      .fun-fact-numbers
+        font-size: 72px
+        margin-right: 16px
+
+  .where-can-find-you
+    .social
+      a + a > .social-item
+        margin-top: 40px
+
+      .social-item svg
+          width: 64px
+          height: 64px
+
+      .social-text
+        .social-handle
+          margin: 0
+          opacity: 0.3
+          font-size: 1.6rem
