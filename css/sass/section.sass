@@ -5,14 +5,10 @@
   margin: 10vh 0
 
 @-webkit-keyframes secondary-section-fade
-  from
-    opacity: 0
   to
     opacity: 1
 
 @keyframes secondary-section-fade
-  from
-    opacity: 0
   to
     opacity: 1
 
@@ -20,7 +16,8 @@
   @extend .flex-center
   position: relative
   background-color: $primary-color
-  animation: secondary-section-fade 500ms
+  opacity: 0
+  animation: secondary-section-fade 300ms ease-in-out 350ms forwards
 
   *
     color: white
