@@ -1,16 +1,27 @@
 {
   "name": "pavsidhu.com",
-  "version": "3.1.3",
-  "description": "My personal website",
-  "main": "index.html",
+  "description": "The website of Pav Sidhu",
+  "version": "4.0.0",
+  "author": "Pav Sidhu <pav@pavsidhu.com>",
+  "homepage": "https://pavsidhu.com",
+  "keywords": ["gatsby"],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PavSidhu/pavsidhu.com/.git"
   },
-  "author": "Pav Sidhu <pav@pavsidhu.com>",
-  "lincese": "MIT",
-  "bugs": {
-    "url": "https://github.com/PavSidhu/pavsidhu.com/issues"
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'"
   },
-  "homepage": "pavsidhu.com"
+  "dependencies": {
+    "gatsby": "^1.9.241",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-react-helmet": "^2.0.8",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1"
+  }
 }
