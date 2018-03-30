@@ -1,6 +1,11 @@
 import React from 'react'
-import Header from '../components/Header'
+import Helmet from 'react-helmet'
 import { injectGlobal } from 'styled-components'
+
+import Header from '../components/Header'
+import favicon16 from './favicons/16.png'
+import favicon32 from './favicons/32.png'
+import favicon48 from './favicons/48.png'
 
 injectGlobal`
   html {
@@ -26,8 +31,13 @@ class Template extends React.Component {
 
     return (
       <div>
-        <Header />
+        <Helmet title="Pav Sidhu">
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link rel="icon" type="image/png" sizes="48x48" href={favicon48} />
+        </Helmet>
 
+        <Header />
         {children()}
       </div>
     )
