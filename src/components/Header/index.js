@@ -18,6 +18,10 @@ const Contents = styled.div`
   max-width: 1200px;
   height: 64px;
   padding: 8px 16px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 8px 0;
+  }
 `
 
 const Logo = styled.img`
