@@ -10,7 +10,6 @@ const Container = styled.aside`
 
   &:hover {
     --title-size: 1.2;
-    --title-rotate: -2deg;
   }
 `
 
@@ -21,7 +20,7 @@ const Title = styled.h1`
   margin-bottom: 8px;
 
   transition: transform 180ms cubic-bezier(0.16, 0.79, 0.71, 1.99);
-  transform: scale(var(--title-size)) rotateZ(var(--title-rotate));
+  transform: scale(var(--title-size));
   transform-origin: 0 50%;
 `
 
