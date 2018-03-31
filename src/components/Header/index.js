@@ -47,7 +47,9 @@ const MenuItem = styled.li`
 const Header = () => (
   <Container>
     <Contents>
-      <Logo src={logo} alt="My face" />
+      <Link to="/" style={{ height: '100%' }}>
+        <Logo src={logo} alt="My face" />
+      </Link>
 
       <Menu>
         <MenuItem>
