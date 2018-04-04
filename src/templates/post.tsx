@@ -1,8 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
-import get from 'lodash/get'
 
 const Container = styled.div`
   display: flex;
@@ -44,9 +42,23 @@ const Content = styled.article`
   color: #333333;
 `
 
-class BlogPost extends React.Component {
+interface Props {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+    markdownRemark: Post
+  }
+}
+
+class BlogPost extends React.Component<Props> {
   render() {
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteTitle = this.props.data.site.siteMetadata.title
+      ? this.props.data.site.siteMetadata.title
+      : null
+
     const {
       frontmatter: { title, date },
       html,

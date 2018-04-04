@@ -18,10 +18,16 @@ const Date = styled.h4`
   line-height: 4rem;
 `
 
-const Posts = ({ posts }) => (
+interface Props {
+  posts: {
+    node: Post[]
+  }
+}
+
+const Posts: React.SFC<Props> = ({ posts }) => (
   <div>
     {posts.map(post => {
-      const { title, path, date, excerpt } = post.node.frontmatter
+      const { title, path, date } = post.node.frontmatter
 
       return (
         <Container key={path}>

@@ -25,9 +25,13 @@ injectGlobal`
   }
 `
 
-class Template extends React.Component {
+interface Props {
+  children: () => JSX.Element
+}
+
+class Template extends React.Component<Props> {
   render() {
-    const { location, children } = this.props
+    const { children } = this.props
 
     return (
       <div>
@@ -42,12 +46,6 @@ class Template extends React.Component {
       </div>
     )
   }
-}
-
-Template.propTypes = {
-  children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object,
 }
 
 export default Template

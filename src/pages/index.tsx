@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import PostList from '../components/PostList'
@@ -20,11 +18,19 @@ const Contents = styled.main`
   grid-gap: 32px;
 `
 
-class Main extends React.Component {
+interface Props {
+  data: {
+    allMarkdownRemark: {
+      edges: Post[]
+    }
+  }
+}
+
+class Main extends React.Component<Props> {
   render() {
     const { data } = this.props
 
-    const posts = data ? data.allMarkdownRemark.edges : []
+    const posts: any = data ? data.allMarkdownRemark.edges : []
 
     return (
       <Container>
@@ -35,10 +41,6 @@ class Main extends React.Component {
       </Container>
     )
   }
-}
-
-Main.propTypes = {
-  route: React.PropTypes.object,
 }
 
 export default Main
@@ -57,8 +59,6 @@ export const pageQuery = graphql`
           frontmatter {
             path
             date(formatString: "Do MMMM YYYY")
-          }
-          frontmatter {
             title
           }
         }
