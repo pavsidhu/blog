@@ -41,4 +41,5 @@ const Posts: React.SFC<Props> = ({ posts }) => (
     })}
   </div>
 )
+
 export default Posts
