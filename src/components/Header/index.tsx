@@ -53,7 +53,7 @@ const Header = () => (
 
       <Menu>
         <MenuItem>
-          <Link to="/about">About</Link>
+          <a href="https://pavsidhu.com">About</a>
         </MenuItem>
         <MenuItem>
           <Link to="/contact">Contact</Link>
