@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { injectGlobal } from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -10,9 +10,14 @@ import favicon48 from './favicons/48.png'
 
 injectGlobal`
   html {
+    height: 100%;
     font-size: 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  body {
+    min-height: 100%;
   }
 
   * {
@@ -27,6 +32,12 @@ injectGlobal`
   }
 `
 
+const Container = styled.div`
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+`
+
 interface Props {
   children: () => JSX.Element
 }
@@ -36,7 +47,7 @@ class Template extends React.Component<Props> {
     const { children } = this.props
 
     return (
-      <div>
+      <Container>
         <Helmet title="Pav Sidhu">
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
@@ -46,7 +57,7 @@ class Template extends React.Component<Props> {
         <Header />
         {children()}
         <Footer />
-      </div>
+      </Container>
     )
   }
 }
