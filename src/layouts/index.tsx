@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { injectGlobal } from 'styled-components'
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import favicon16 from './favicons/16.png'
 import favicon32 from './favicons/32.png'
 import favicon48 from './favicons/48.png'
@@ -17,6 +18,7 @@ injectGlobal`
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   a {
@@ -43,6 +45,7 @@ class Template extends React.Component<Props> {
 
         <Header />
         {children()}
+        <Footer />
       </div>
     )
   }

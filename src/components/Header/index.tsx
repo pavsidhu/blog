@@ -2,7 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import styles from '../../styles'
 import logo from './logo.svg'
+
+const headerStyles = {
+  width: {
+    large: '1232px',
+  },
+}
 
 const Container = styled.header`
   display: flex;
@@ -15,11 +22,11 @@ const Contents = styled.div`
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: ${styles.width.max};
   height: 64px;
   padding: 8px 16px;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: ${headerStyles.width.large}) {
     padding: 8px 0;
   }
 `
@@ -36,12 +43,8 @@ const Menu = styled.ul`
 `
 
 const MenuItem = styled.li`
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-left: 32px;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 1.5em;
-  }
 `
 
 const Header = () => (

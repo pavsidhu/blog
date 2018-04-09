@@ -1,0 +1,87 @@
+/* *
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+
+pre {
+  color: #1b1b1b;
+  background-color: #f8f8f8;
+}
+
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #3ea7bb;
+}
+
+.token.comment,
+.token.block-comment,
+.token.punctuation {
+  color: #5f6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #f05f40;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted,
+.token.class-name {
+  color: #3ea7bb;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable,
+.token.regex,
+.token.important {
+  color: #9756e1;
+}
+
+.language-css .token.string,
+.style .token.string {
+  color: #3ea7bb;
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: #e0d7d1;
+}
