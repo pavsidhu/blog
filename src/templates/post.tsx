@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import readingTime from 'reading-time'
 
 import styles from '../styles'
 import './prism.css'
@@ -113,6 +114,9 @@ class BlogPost extends React.Component<Props> {
       html,
     } = this.props.data.markdownRemark
 
+    const textWithoutHTML = html.replace(/<[^>]*>/g, '')
+    const readTime = readingTime(textWithoutHTML)
+
     return (
       <Container>
         <Helmet title={`${title} | ${siteTitle}`} />
@@ -120,7 +124,9 @@ class BlogPost extends React.Component<Props> {
         <Header>
           <HeaderContents>
             <Title>{title}</Title>
-            <Date>Last updated on {date}</Date>
+            <Date>
+              Last updated on {date} | {readTime.text}
+            </Date>
           </HeaderContents>
         </Header>
 
