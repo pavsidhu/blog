@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import styles from '../styles'
+
 const Container = styled.aside`
   align-self: flex-start;
-  clip-path: polygon(0 16px, 100% 0, 100% calc(100% - 16px), 0 100%);
-  background-color: #ececec;
-  padding: 32px 16px;
   transform: none;
+  color: ${styles.color.grey};
 
   &:hover {
     --title-size: 1.2;
@@ -29,14 +29,28 @@ const Description = styled.p`
   line-height: 2.8rem;
 `
 
+const Highlight = styled.span`
+  background-color: ${styles.color.orange};
+  padding: 2px 4px;
+  color: white;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+`
+
 class Bio extends React.Component {
   render() {
     return (
       <Container>
         <Title>Hi, I'm Pav 👋</Title>
         <Description>
-          I like to build and design things. I'm currently studying at the
-          University of Birmingham.
+          I like to design and build <Highlight>web</Highlight>,{' '}
+          <Highlight>mobile</Highlight> and <Highlight>voice</Highlight>{' '}
+          experiences using code. I'm also a huge fan of{' '}
+          <Highlight>Javascript</Highlight> and <Highlight>React</Highlight>.
+          I'm from <Highlight>Cardiff</Highlight> but I'm currently studying at
+          the <Highlight>University of Birmingham</Highlight> in the United
+          Kingdom.
         </Description>
       </Container>
     )
