@@ -13,7 +13,7 @@ const Container = styled.div`
 `
 
 const Header = styled.header`
-  width: 100vw;
+  width: 100%;
   background-color: #f05f40;
   clip-path: polygon(0 32px, 100% 0, 100% calc(100% - 32px), 0 100%);
   display: flex;
@@ -91,10 +91,10 @@ const Content = styled.article`
   pre {
     padding: 12px;
     border-radius: 4px;
-    width: 100%;
-    max-width: ${styles.width.contentMax};
+    width: 100vw;
     overflow: scroll;
     font-size: 1.6rem;
+    overflow: auto;
   }
 `
 

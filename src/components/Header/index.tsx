@@ -14,7 +14,7 @@ const headerStyles = {
 const Container = styled.header`
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 `
 
 const Contents = styled.div`
