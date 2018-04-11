@@ -7,22 +7,22 @@ import styles from '../styles'
 
 const Container = styled.div`
   background-color: #f8f8f8;
-  padding: 24px;
   margin-bottom: 16px;
   color: ${styles.color.grey};
+
+  &:hover {
+    background-color: ${styles.color.hover};
+  }
 `
 
-const Cover = styled.img`
-  width: 100%;
+const PostLink = styled(Link)`
+  display: block;
+  padding: 24px;
 `
 
 const Title = styled.h3`
   font-size: 2.8rem;
   line-height: 4rem;
-
-  &:hover {
-    color: ${styles.color.orange};
-  }
 `
 
 const Subtext = styled.h4`
@@ -54,16 +54,16 @@ const Posts: React.SFC<Props> = ({ posts }) => (
 
       return (
         <Container key={path}>
-          <Link to={path}>
+          <PostLink to={path}>
             {cover && <Cover src={cover} />}
             <Title>{title}</Title>
-          </Link>
-          <Subtext>
-            {date}
-            <SubtextDot>•</SubtextDot>
-            {readTime.text}
-          </Subtext>
-          <Excerpt>{post.node.excerpt}</Excerpt>
+            <Subtext>
+              {date}
+              <SubtextDot>•</SubtextDot>
+              {readTime.text}
+            </Subtext>
+            <Excerpt>{post.node.excerpt}</Excerpt>
+          </PostLink>
         </Container>
       )
     })}

@@ -6,7 +6,8 @@ const styles = {
 
   color: {
     orange: '#f05f40',
-    grey: '#333333'
+    grey: '#333333',
+    hover: '#ececec',
   },
 }
 

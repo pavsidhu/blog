@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import styles from '../styles'
 import mediumIcon from '../assets/medium.svg'
 import githubIcon from '../assets/github.svg'
 import twitterIcon from '../assets/twitter.svg'
@@ -18,7 +19,7 @@ const SocialLink = styled.a`
   padding: 16px 8px;
 
   &:hover {
-    background-color: #f8f8f8;
+    background-color: ${styles.color.hover};
   }
 `
 
