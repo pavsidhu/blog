@@ -45,21 +45,22 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   font-size: 1.6em;
   margin-left: 32px;
+
+  &:hover {
+    color: ${styles.color.orange};
+  }
 `
 
 const Header = () => (
   <Container>
     <Contents>
       <Link to="/" style={{ height: '100%' }}>
-        <Logo src={logo} alt="My face" />
+        <Logo src={logo} alt="Go home" />
       </Link>
 
       <Menu>
         <MenuItem>
-          <a href="https://pavsidhu.com">About</a>
-        </MenuItem>
-        <MenuItem>
-          <Link to="/contact">Contact</Link>
+          <a href="https://pavsidhu.com">About Me</a>
         </MenuItem>
       </Menu>
     </Contents>
