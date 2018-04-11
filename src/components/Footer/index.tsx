@@ -49,9 +49,9 @@ const SocialList = styled.div`
   }
 `
 
-const SocialItem = styled.img`
-  width: 24px;
-  height: 24px;
+const SocialIcon = styled.img`
+  width: 32px;
+  height: 32px;
   margin: 0 16px;
 
   @media only screen and (min-width: ${footerStyles.width.medium}) {
@@ -75,16 +75,19 @@ const Footer = () => (
     <Contents>
       <SocialList>
         <a href="https://medium.com/@pavsidhu">
-          <SocialItem src={mediumIcon} alt="Medium icon" />
+          <SocialIcon src={mediumIcon} alt="Medium icon" />
         </a>
+
         <a href="https://github.com/pavsidhu">
-          <SocialItem src={githubIcon} alt="Github icon" />
+          <SocialIcon src={githubIcon} alt="Github icon" />
         </a>
+
         <a href="https://twitter.com/pav_sidhu">
-          <SocialItem src={twitterIcon} alt="Twitter icon" />
+          <SocialIcon src={twitterIcon} alt="Twitter icon" />
         </a>
+
         <a href="mailto:pav@pavsidhu.com">
-          <SocialItem src={emailIcon} alt="Email icon" />
+          <SocialIcon src={emailIcon} alt="Email icon" />
         </a>
       </SocialList>
 
