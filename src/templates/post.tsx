@@ -29,9 +29,9 @@ const HeaderContents = styled.div`
 `
 
 const Title = styled.h1`
-  color: #ffffff;
+  color: white;
   font-size: 2.8em;
-  font-weight: normal;
+  font-weight: bold;
   margin-bottom: 8px;
 
   @media only screen and (min-width: ${styles.width.max}) {
@@ -40,9 +40,15 @@ const Title = styled.h1`
   }
 `
 
-const Date = styled.p`
-  color: #ffffff;
-  font-size: 1.2em;
+const Subtext = styled.p`
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  display: flex;
+`
+
+const SubtextDot = styled.div`
+  margin: 0 12px;
 `
 
 const Content = styled.article`
@@ -62,7 +68,7 @@ const Content = styled.article`
   h4 + *,
   h5 + *,
   h6 + * {
-    margin-top: 16px;
+    margin-top: 16px !important;
   }
 
   ul,
@@ -124,9 +130,11 @@ class BlogPost extends React.Component<Props> {
         <Header>
           <HeaderContents>
             <Title>{title}</Title>
-            <Date>
-              Last updated on {date} | {readTime.text}
-            </Date>
+            <Subtext>
+              {date}
+              <SubtextDot>•</SubtextDot>
+              {readTime.text}
+            </Subtext>
           </HeaderContents>
         </Header>
 
