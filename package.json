@@ -25,6 +25,7 @@
   "dependencies": {
     "@types/react-helmet": "^5.0.5",
     "gatsby": "^1.8.12",
+    "gatsby-cli": "^1.1.50",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.4",
