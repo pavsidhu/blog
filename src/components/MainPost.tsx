@@ -9,7 +9,7 @@ const Container = styled.div`
   grid-column: 1 / 4;
   height: 50vmin;
   min-height: 240px;
-  clip-path: polygon(0 16px, 100% 0, 100% calc(100% - 16px), 0 100%);
+  clip-path: polygon(0 32px, 100% 0, 100% calc(100% - 32px), 0 100%);
   background-color: ${styles.color.orange};
   padding: 32px 16px;
   color: white;
