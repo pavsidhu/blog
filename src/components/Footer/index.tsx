@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 import styles from '../../styles'
-import mediumIcon from './medium.svg'
-import githubIcon from './github.svg'
-import twitterIcon from './twitter.svg'
-import emailIcon from './email.svg'
+import mediumIcon from '../../assets/medium.svg'
+import githubIcon from '../../assets/github.svg'
+import twitterIcon from '../../assets/twitter.svg'
+import emailIcon from '../../assets/email.svg'
 
 const footerStyles = {
   width: {

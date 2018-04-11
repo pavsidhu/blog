@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import MainPost from '../components/MainPost'
 import PostList from '../components/PostList'
 import Bio from '../components/Bio'
+import Social from '../components/Social'
 
 const Container = styled.main`
   display: flex;
@@ -18,6 +19,10 @@ const Contents = styled.div`
   grid-gap: 32px;
   max-width: 1200px;
   width: 100%;
+`
+
+const SidePanel = styled.aside`
+  align-self: flex-start;
 `
 
 interface Props {
@@ -39,7 +44,11 @@ class Main extends React.Component<Props> {
         <MainPost post={posts[0]} />
         <Contents>
           <PostList posts={posts.slice(1)} />
-          <Bio />
+
+          <SidePanel>
+            <Bio />
+            <Social />
+          </SidePanel>
         </Contents>
       </Container>
     )

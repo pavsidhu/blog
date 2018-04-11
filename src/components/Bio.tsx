@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 import styles from '../styles'
 
-const Container = styled.aside`
-  align-self: flex-start;
-  transform: none;
+const Container = styled.div`
   color: ${styles.color.grey};
 
   &:hover {
@@ -27,6 +25,7 @@ const Title = styled.h1`
 const Description = styled.p`
   font-size: 1.5rem;
   line-height: 2.8rem;
+  margin-bottom: 24px;
 `
 
 const Highlight = styled.span`
@@ -38,23 +37,18 @@ const Highlight = styled.span`
   white-space: nowrap;
 `
 
-class Bio extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Title>Hi, I'm Pav 👋</Title>
-        <Description>
-          I like to design and build <Highlight>web</Highlight>,{' '}
-          <Highlight>mobile</Highlight> and <Highlight>voice</Highlight>{' '}
-          experiences using code. I'm also a huge fan of{' '}
-          <Highlight>Javascript</Highlight> and <Highlight>React</Highlight>.
-          I'm from <Highlight>Cardiff</Highlight> but I'm currently studying at
-          the <Highlight>University of Birmingham</Highlight> in the United
-          Kingdom.
-        </Description>
-      </Container>
-    )
-  }
-}
+const Bio = () => (
+  <Container>
+    <Title>Hi, I'm Pav 👋</Title>
+    <Description>
+      I like to design and build <Highlight>web</Highlight>,{' '}
+      <Highlight>mobile</Highlight> and <Highlight>voice</Highlight> experiences
+      using code. I'm also a huge fan of <Highlight>Javascript</Highlight> and{' '}
+      <Highlight>React</Highlight>. I'm from <Highlight>Cardiff</Highlight> but
+      I'm currently studying at the{' '}
+      <Highlight>University of Birmingham</Highlight> in the United Kingdom.
+    </Description>
+  </Container>
+)
 
 export default Bio
