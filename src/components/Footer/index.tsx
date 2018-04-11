@@ -75,16 +75,16 @@ const Footer = () => (
     <Contents>
       <SocialList>
         <a href="https://medium.com/@pavsidhu">
-          <SocialItem src={mediumIcon} />
+          <SocialItem src={mediumIcon} alt="Medium icon" />
         </a>
         <a href="https://github.com/pavsidhu">
-          <SocialItem src={githubIcon} />
+          <SocialItem src={githubIcon} alt="Github icon" />
         </a>
         <a href="https://twitter.com/pav_sidhu">
-          <SocialItem src={twitterIcon} />
+          <SocialItem src={twitterIcon} alt="Twitter icon" />
         </a>
         <a href="mailto:pav@pavsidhu.com">
-          <SocialItem src={emailIcon} />
+          <SocialItem src={emailIcon} alt="Email icon" />
         </a>
       </SocialList>
 
