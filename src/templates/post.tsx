@@ -126,6 +126,7 @@ class BlogPost extends React.Component<Props> {
     const {
       frontmatter: { title, date },
       html,
+      excerpt,
     } = this.props.data.markdownRemark
 
     const textWithoutHTML = html.replace(/<[^>]*>/g, '')
@@ -133,7 +134,9 @@ class BlogPost extends React.Component<Props> {
 
     return (
       <Container>
-        <Helmet title={`${title} | ${siteTitle}`} />
+        <Helmet title={`${title} | ${siteTitle}`}>
+          <meta name="description" content={excerpt} />
+        </Helmet>
 
         <Header>
           <HeaderContents>
@@ -165,6 +168,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
+      excerpt(pruneLength: 320)
       frontmatter {
         title
         date(formatString: "Do MMMM YYYY")

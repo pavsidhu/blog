@@ -6,6 +6,7 @@ import PostList from '../components/PostList'
 import Bio from '../components/Bio'
 import Social from '../components/Social'
 import styles from '../styles'
+import { Helmet } from 'react-helmet'
 
 const Container = styled.main`
   display: flex;
@@ -76,6 +77,16 @@ class Main extends React.Component<Props> {
 
     return (
       <Container>
+        <Helmet title="Pav Sidhu | Blog">
+          <meta
+            name="description"
+            content={`
+              Hi I'm Pav, I like to design and build web, mobile and voice experiences using code.
+              I'm also a huge fan of Javascript and React. Welcome to my blog.
+            `}
+          />
+        </Helmet>
+
         <MainPost post={posts[0]} />
         <Contents>
           <PostList posts={posts.slice(1)} />
