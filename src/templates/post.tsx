@@ -82,8 +82,8 @@ const Content = styled.article`
     text-decoration: underline;
   }
 
-  img,
-  pre {
+  img {
+    width: 100%;
     border-radius: 4px;
   }
 
