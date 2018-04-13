@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 `
 
 const Header = styled.header`
@@ -83,18 +84,13 @@ const Content = styled.article`
 
   img,
   pre {
-    width: 100%;
-    max-width: ${styles.width.contentMax};
     border-radius: 4px;
   }
 
   pre {
-    padding: 12px;
-    border-radius: 4px;
-    width: 100vw;
     overflow: scroll;
+    padding: 12px;
     font-size: 1.6rem;
-    overflow: auto;
   }
 `
 
