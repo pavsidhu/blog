@@ -45,8 +45,8 @@ const SubtextDot = styled.div`
 `
 
 const Excerpt = styled.p`
-  font-size: 1.4rem;
-  line-height: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
 `
 
 interface Props {

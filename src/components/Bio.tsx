@@ -28,7 +28,7 @@ const Title = styled.h1`
 `
 
 const Description = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2.8rem;
 `
 
