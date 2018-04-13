@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Header = styled.header`
   width: 100%;
-  background-color: #f05f40;
+  background-color: ${styles.color.orange};
   clip-path: polygon(0 32px, 100% 0, 100% calc(100% - 32px), 0 100%);
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@ const Content = styled.article`
   }
 
   p a {
-    color: #f05f40;
+    color: ${styles.color.orange};
     text-decoration: underline;
   }
 
@@ -91,6 +91,18 @@ const Content = styled.article`
     overflow: scroll;
     padding: 12px;
     font-size: 1.6rem;
+  }
+
+  blockquote {
+    background-color: ${styles.color.orange};
+    padding-left: 8px;
+    color: #757575;
+    font-style: italic;
+
+    & p {
+      background-color: white;
+      padding-left: 8px;
+    }
   }
 `
 
