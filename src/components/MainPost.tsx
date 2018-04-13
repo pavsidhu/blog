@@ -7,8 +7,6 @@ import styles from '../styles'
 
 const Container = styled.div`
   grid-column: 1 / 4;
-  min-height: 240px;
-  height: 40vh;
   clip-path: polygon(0 32px, 100% 0, 100% calc(100% - 32px), 0 100%);
   background-color: ${styles.color.orange};
   padding: 32px 16px;
@@ -20,7 +18,7 @@ const Container = styled.div`
   justify-content: center;
 
   @media only screen and (min-width: ${styles.width.medium}) {
-    height: 50vmin;
+    height: 40vh;
     min-height: 240px;
   }
 `
@@ -29,6 +27,7 @@ const Contents = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 16px 0;
 `
 
 const Title = styled.h3`
