@@ -6,6 +6,15 @@ import readingTime from 'reading-time'
 import styles from '../styles'
 
 const Container = styled.div`
+  @media only screen and (min-width: ${styles.width.medium}) {
+    @supports not (display: grid) {
+      flex: 3;
+      margin-right: 32px;
+    }
+  }
+`
+
+const Post = styled.div`
   background-color: #f8f8f8;
   margin-bottom: 16px;
   color: ${styles.color.grey};
@@ -45,7 +54,7 @@ interface Props {
 }
 
 const Posts: React.SFC<Props> = ({ posts }) => (
-  <div>
+  <Container>
     {posts.map(post => {
       const { title, path, date, cover } = post.node.frontmatter
 
@@ -53,7 +62,7 @@ const Posts: React.SFC<Props> = ({ posts }) => (
       const readTime = readingTime(textWithoutHTML)
 
       return (
-        <Container key={path}>
+        <Post key={path}>
           <PostLink to={path}>
             {cover && <Cover src={cover} />}
             <Title>{title}</Title>
@@ -64,10 +73,10 @@ const Posts: React.SFC<Props> = ({ posts }) => (
             </Subtext>
             <Excerpt>{post.node.excerpt}</Excerpt>
           </PostLink>
-        </Container>
+        </Post>
       )
     })}
-  </div>
+  </Container>
 )
 
 export default Posts

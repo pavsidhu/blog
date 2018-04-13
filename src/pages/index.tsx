@@ -5,6 +5,7 @@ import MainPost from '../components/MainPost'
 import PostList from '../components/PostList'
 import Bio from '../components/Bio'
 import Social from '../components/Social'
+import styles from '../styles'
 
 const Container = styled.main`
   display: flex;
@@ -14,15 +15,49 @@ const Container = styled.main`
 `
 
 const Contents = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  grid-gap: 32px;
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+
   max-width: 1200px;
   width: 100%;
+  padding: 0 16px;
+
+  @media only screen and (min-width: ${styles.width.medium}) {
+    grid-template-columns: 1fr minmax(280px, 0.4fr);
+    grid-gap: 32px;
+    padding: 0 16px;
+
+    @supports not (display: grid) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  @media only screen and (min-width: ${styles.width.max}) {
+    padding: 0;
+  }
 `
 
 const SidePanel = styled.aside`
   align-self: flex-start;
+
+  @media only screen and (min-width: 600px) and (max-width: ${styles.width
+      .medium}) {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+    }
+  }
+
+  @media only screen and (min-width: ${styles.width.medium}) {
+    @supports not (display: grid) {
+      flex: 1;
+    }
+  }
 `
 
 interface Props {

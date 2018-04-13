@@ -9,8 +9,7 @@ import emailIcon from '../../assets/email.svg'
 
 const footerStyles = {
   width: {
-    medium: '700px',
-    large: '1232px',
+    large: '1200px',
   },
 }
 
@@ -18,8 +17,12 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   width: 100vw;
-  margin-top: 32px;
+  margin-top: 16px;
   padding: 16px;
+
+  @media only screen and (min-width: ${styles.width.medium}) {
+    margin-top: 32px;
+  }
 
   @media only screen and (min-width: ${footerStyles.width.large}) {
     margin-top: 64px;
@@ -33,19 +36,18 @@ const Contents = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (min-width: ${footerStyles.width.medium}) {
+  @media only screen and (min-width: ${styles.width.medium}) {
     flex-direction: row;
     max-width: ${styles.width.max};
   }
 `
 
 const SocialList = styled.div`
-  flex: 1;
-  display: flex;
-  margin-bottom: 24px;
+  display: none;
 
-  @media only screen and (min-width: ${footerStyles.width.medium}) {
-    margin-bottom: 0;
+  @media only screen and (min-width: ${styles.width.medium}) {
+    flex: 1;
+    display: flex;
   }
 `
 
@@ -54,7 +56,7 @@ const SocialIcon = styled.img`
   height: 32px;
   margin: 0 16px;
 
-  @media only screen and (min-width: ${footerStyles.width.medium}) {
+  @media only screen and (min-width: ${styles.width.medium}) {
     width: 24px;
     height: 24px;
     margin: 0 32px 0 0;
@@ -65,7 +67,7 @@ const Text️ = styled.p`
   font-size: 1.2em;
   color: ${styles.color.grey};
 
-  @media only screen and (min-width: ${footerStyles.width.medium}) {
+  @media only screen and (min-width: ${styles.width.medium}) {
     font-size: 1.4em;
   }
 `

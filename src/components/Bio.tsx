@@ -5,9 +5,14 @@ import styles from '../styles'
 
 const Container = styled.div`
   color: ${styles.color.grey};
+  margin-bottom: 16px;
 
   &:hover {
     --title-size: 1.2;
+  }
+
+  @media only screen and (min-width: ${styles.width.medium}) {
+    margin-bottom: 24px;
   }
 `
 
@@ -25,7 +30,6 @@ const Title = styled.h1`
 const Description = styled.p`
   font-size: 1.5rem;
   line-height: 2.8rem;
-  margin-bottom: 24px;
 `
 
 const Highlight = styled.span`

@@ -16,10 +16,14 @@ const SocialLink = styled.a`
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  padding: 16px 8px;
+  padding: 16px 0;
 
   &:hover {
     background-color: ${styles.color.hover};
+  }
+
+  @media only screen and (min-width: ${styles.width.medium}) {
+    padding: 16px 8px;
   }
 `
 

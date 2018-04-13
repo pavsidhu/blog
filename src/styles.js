@@ -1,6 +1,7 @@
 const styles = {
   width: {
     max: '1200px',
+    medium: '800px',
     contentMax: '700px',
   },
 
