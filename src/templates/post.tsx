@@ -90,7 +90,8 @@ const Content = styled.article`
   pre {
     overflow: scroll;
     padding: 12px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    border-radius: 4px;
   }
 
   blockquote {
