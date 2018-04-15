@@ -85,13 +85,15 @@ const Content = styled.article`
     border-radius: 4px;
   }
 
-  img + em {
+  img + em,
+  .gatsby-resp-image-wrapper + em {
     display: block;
     width: 100%;
     font-size: 1.4rem;
     font-style: normal;
     line-height: 2rem;
     text-align: center;
+    margin-top: 8px;
   }
 
   pre {
