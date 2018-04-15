@@ -90,5 +90,3 @@ There we have it. I have found that now I’ve used timezones once, it isn’t a
 If you really want to melt your brain, this YouTube video by Tom Scott explains timezones in much more detail, enjoy (or not).
 
 `youtube:https://www.youtube.com/embed/-5wpm-gesOY`
-
-Thanks for reading! Let me know your thoughts or past experiences on managing timezones. 😄
