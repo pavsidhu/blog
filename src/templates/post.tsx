@@ -101,6 +101,17 @@ const Content = styled.article`
     padding: 12px;
     font-size: 1.4rem;
     border-radius: 4px;
+
+    code {
+      padding: 0;
+    }
+  }
+
+  /* Inline code */
+  code {
+    background-color: #f8f8f8;
+    padding: 8px;
+    font-size: 14px;
   }
 
   blockquote {
