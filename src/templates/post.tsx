@@ -85,6 +85,15 @@ const Content = styled.article`
     border-radius: 4px;
   }
 
+  img + em {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: 2rem;
+    text-align: center;
+  }
+
   pre {
     overflow: scroll;
     padding: 12px;
