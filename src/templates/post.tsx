@@ -110,7 +110,7 @@ const Content = styled.article`
   /* Inline code */
   code {
     background-color: #f8f8f8;
-    padding: 8px;
+    padding: 4px 8px;
     font-size: 14px;
   }
 
