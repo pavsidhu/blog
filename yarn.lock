@@ -4030,6 +4030,13 @@ gatsby-remark-copy-linked-files@^1.5.2:
     probe-image-size "^3.2.0"
     unist-util-visit "^1.1.1"
 
+gatsby-remark-embed-youtube@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-youtube/-/gatsby-remark-embed-youtube-0.0.7.tgz#80f2407be37bce854f880b08c78d8a05ea2d1459"
+  dependencies:
+    babel-runtime "^6.26.0"
+    unist-util-visit "^1.1.3"
+
 gatsby-remark-images@^1.5.4:
   version "1.5.60"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.60.tgz#873717f46d427335d26b7542427d18a424cc888c"
@@ -4051,7 +4058,7 @@ gatsby-remark-prismjs@^1.2.1:
     prismjs "^1.12.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-responsive-iframe@^1.4.3:
+gatsby-remark-responsive-iframe@^1.4.18:
   version "1.4.18"
   resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-1.4.18.tgz#2c8eb174c3db8ab75f8769ae1d30c5af2e27df22"
   dependencies:
@@ -10407,7 +10414,7 @@ unist-util-visit-children@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.1.tgz#eba63b371116231181068837118b6e6e10ec8844"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.3.0:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3, unist-util-visit@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.3.0.tgz#41ca7c82981fd1ce6c762aac397fc24e35711444"
   dependencies:
