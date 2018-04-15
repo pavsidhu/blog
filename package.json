@@ -1,16 +1,16 @@
 {
-  "name": "pavsidhu.com",
-  "description": "The website of Pav Sidhu",
+  "name": "blog.pavsidhu.com",
+  "description": "A place for me to write",
   "version": "4.0.0",
   "author": "Pav Sidhu <pav@pavsidhu.com>",
-  "homepage": "https://pavsidhu.com",
+  "homepage": "https://www.blog.pavsidhu.com",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PavSidhu/pavsidhu.com/.git"
+    "url": "git+https://github.com/PavSidhu/blog.pavsidhu.com/.git"
   },
   "scripts": {
     "dev": "gatsby develop",
