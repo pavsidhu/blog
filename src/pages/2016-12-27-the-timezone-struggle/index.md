@@ -4,8 +4,6 @@ date: "2016-12-27"
 path: "/the-timezone-struggle"
 ---
 
-# The Timezone Struggle
-
 Something I recently found difficult to get my head around was how timezones work. It’s one of those things you tend to avoid as much as possible, however, I realised that there was quite a big flaw in my website, Revisify, that needed addressing.
 
 For those of you who don’t know, Revisify is a tool I built to help students study. Students can create questions, test themselves and progress. I have one feature available, study streaks, which count the number consecutive days a student has been studying.
