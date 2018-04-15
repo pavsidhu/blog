@@ -36,14 +36,12 @@ const Title = styled.h1`
   margin-bottom: 8px;
 
   @media only screen and (min-width: ${styles.width.max}) {
-    margin-bottom: 16px;
     font-size: 3.2em;
   }
 `
 
 const Subtext = styled.p`
   color: white;
-  font-weight: bold;
   font-size: 1.6em;
   display: flex;
 `
