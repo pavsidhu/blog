@@ -105,6 +105,10 @@ const Content = styled.article`
       padding-left: 8px;
     }
   }
+
+  iframe {
+    border: none;
+  }
 `
 
 interface Props {
