@@ -1,3 +1,3 @@
-# pavsidhu.com
+# [Pav Sidhu Blog](https://www.blog.pavsidhu.com)
 
-There's nothing much to see here 😐
+A place for me to write.
