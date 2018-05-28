@@ -40,10 +40,10 @@ const Title = styled.h1`
   }
 `
 
-const Subtext = styled.p`
+const Subtext = styled.div`
+  display: flex;
   color: white;
   font-size: 1.6em;
-  display: flex;
 `
 
 const SubtextDot = styled.div`
@@ -167,9 +167,9 @@ class BlogPost extends React.Component<Props> {
           <HeaderContents>
             <Title>{title}</Title>
             <Subtext>
-              {date}
+              <div>{date}</div>
               <SubtextDot>•</SubtextDot>
-              {readTime.text}
+              <div>{readTime.text}</div>
             </Subtext>
           </HeaderContents>
         </Header>
