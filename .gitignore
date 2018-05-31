@@ -11,3 +11,4 @@ yarn-error.log
 .DS_STORE
 *.sketch
 TODO.md
+.vscode/
