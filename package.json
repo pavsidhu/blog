@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PavSidhu/blog.pavsidhu.com/.git"
+    "url": "git+https://github.com/PavSidhu/blog/.git"
   },
   "scripts": {
     "dev": "gatsby develop",
