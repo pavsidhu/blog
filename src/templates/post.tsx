@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import readingTime from 'reading-time'
 
+import Share from '../components/Share'
 import styles from '../styles'
 import './prism.css'
 
@@ -149,7 +150,7 @@ class BlogPost extends React.Component<Props> {
       : null
 
     const {
-      frontmatter: { title, date },
+      frontmatter: { title, date, path },
       html,
       excerpt,
     } = this.props.data.markdownRemark
@@ -175,6 +176,8 @@ class BlogPost extends React.Component<Props> {
         </Header>
 
         <Content dangerouslySetInnerHTML={{ __html: html }} />
+
+        <Share title={title} link={`https://blog.pavsidhu.com${path}`} />
       </Container>
     )
   }
@@ -197,6 +200,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "Do MMMM YYYY")
+        path
       }
     }
   }
