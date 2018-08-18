@@ -116,14 +116,17 @@ const Content = styled.article`
   }
 
   blockquote {
-    background-color: ${styles.color.orange};
-    padding-left: 8px;
+    border-left: 8px solid ${styles.color.orange};
     color: #757575;
     font-style: italic;
 
     & p {
       background-color: white;
       padding-left: 8px;
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
     }
   }
 
