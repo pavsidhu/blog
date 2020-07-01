@@ -45,7 +45,7 @@ module.exports = {
         trackingId: 'UA-41576939-5',
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
   ],
